@@ -1,15 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thesis{% block title%}{% endblock%}</title>
+    <title>{% block title%} {%endblock%}</title>
+    <link rel="stylesheet" href={% static "css/styles.css" %}>
   </head>
+
   <body>
-    <div id="container"></div>
+    <div id="content">{% block content %} {% endblock %}</div>
     <div id="sidebar">
       <h2>My Blog</h2>
-      <p>this is my blog</p>
+      <p>This is my Blog</p>
     </div>
   </body>
 </html>
