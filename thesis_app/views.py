@@ -38,4 +38,4 @@ def post_comment(request, post_id):
         comment.post = post
         comment.save()
 
-    return render(request, "comment.html", {'post': post, 'form': form, 'comment': comment})
+    return render(request, "posts/comment.html", {'post': post, 'form': form, 'comment': comment})
